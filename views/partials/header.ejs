@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+        content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 4 admin, bootstrap 4, css3 dashboard, bootstrap 4 dashboard, severny admin bootstrap 4 dashboard, frontend, responsive bootstrap 4 admin template, my admin design, my admin dashboard bootstrap 4 dashboard template">
+    <meta name="description"
+        content="My Admin is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
+    <meta name="robots" content="noindex,nofollow">
+    <title>PawProtection</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="/stylesheets/body.css">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    <!-- Bootstrap Core CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Menu CSS -->
+    <link href="bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+    <!-- Menu CSS -->
+    <link href="bower_components/morrisjs/morris.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+   
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    </head>
+    <body>
+        <div>
+            <nav class="navbar navbar-expand-md navbar-light  fixed-top" style="color:white;; background-color: #3a3f51;">
+                <a class="navbar-brand" href="/" style="color:white;">
+                  <img style="width: 15%; height: 15%;" src="https://img.icons8.com/emoji/48/000000/paw-prints.png"/>
+                PawsProtection </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+                </button>
+          
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <!-- <li class="nav-item active">
+                    <a class="nav-link" href="/campgrounds" style="color:white;">Dashboard</a>
+                  </li> -->
+                </ul> 
+                    <ul class="navbar-nav navbar-right">
+                      <% if (currentUser) { %>
+                      
+                        <li class="nav-item active">
+                          <a class="nav-link" href="/user"style="color:rgba(255,255,255,.4);;"><%=currentUser.username%><span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                          <a class="nav-link" href="/logout" style="color:rgba(255,255,255,.4);;">Logout</a>
+                        </li>
+                        <% } else { %>
+                      
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/login"style="color:rgba(255,255,255,.4);;">Login<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/register" style="color:rgba(255,255,255,.4);;">Signup</a>
+                    </li>
+                    <%  } %>
+                   
+                   
+                   
+                    </ul>
+                </ul>            
+                </div>        
+            </nav>
+            <div class="container">
+            <% if(error && error.length > 0) { %>
+              <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+                <%= error %>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            <% } %>
+            <% if(success && success.length > 0) { %>
+              <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+                <%= success %>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            <% } %>
+          </div>
+        </div>
+
+        
