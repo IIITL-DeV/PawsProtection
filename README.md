@@ -1,5 +1,5 @@
 # PawsProtection
-This is a website which is built with the following objectives:
+This is a website which is built with the following objectives: <br/>
 1: To prevent animal harassment and inspire the community to care for animal welfare.
 2: Cooperate with concerned organizations to promote animal welfare.
 
